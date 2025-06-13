@@ -1,0 +1,7 @@
+(env
+ (dev
+  (flags
+   (-warn-error -A)))
+ (release
+  (flags
+   (-warn-error +A))))

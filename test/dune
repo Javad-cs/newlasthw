@@ -1,0 +1,38 @@
+(rule
+ (deps example1.c)
+ (targets example1.output)
+ (action
+  (with-stdout-to
+   example1.output
+   (run ../src/main.exe example1.c))))
+
+(rule
+ (alias runtest)
+ (action
+  (diff example1.expected example1.output)))
+
+(rule
+ (deps example2.c)
+ (targets example2.output)
+ (action
+  (with-stdout-to
+   example2.output
+   (run ../src/main.exe example2.c))))
+
+(rule
+ (alias runtest)
+ (action
+  (diff example2.expected example2.output)))
+
+(rule
+ (deps example3.c)
+ (targets example3.output)
+ (action
+  (with-stdout-to
+   example3.output
+   (run ../src/main.exe example3.c))))
+
+(rule
+ (alias runtest)
+ (action
+  (diff example3.expected example3.output)))

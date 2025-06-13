@@ -1,0 +1,6 @@
+(executable
+ (name main)
+ (modules main CFG constraint analyzer frontend classroom)
+ (libraries ocamlgraph prosys-cil)
+ (instrumentation
+  (backend bisect_ppx)))
